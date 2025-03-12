@@ -4,35 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        .welcome-message {
-            text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="welcome-message">
-        <h1>Welcome!</h1>
-        <p>Our content is coming in a few days. Stay tuned!</p>
+<body class="bg-gradient-to-br from-purple-500 to-pink-500 min-h-screen flex items-center justify-center p-4">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 max-w-5xl">
+        <div class="w-full md:w-1/2">
+            <img src="https://images.pexels.com/photos/16237456/pexels-photo-16237456/free-photo-of-ville-circulation-trafic-aube.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="City Traffic at Dawn" class="rounded-xl shadow-2xl w-full h-auto object-cover" />
+        </div>
+        <div class="w-full md:w-1/2">
+            <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-xl shadow-2xl p-8">
+                <h1 class="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Welcome!</h1>
+                <p class="text-lg text-gray-700 leading-relaxed">Our content is coming in a few days. Stay tuned!</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
