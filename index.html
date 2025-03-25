@@ -1,22 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Scanner de Code-barres</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/quagga@0.12.1/dist/quagga.min.js"></script>
 </head>
-<body class="bg-gradient-to-br from-purple-500 to-pink-500 min-h-screen flex items-center justify-center p-4">
-    <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 max-w-5xl">
-        <div class="w-full md:w-1/2">
-            <img src="https://images.pexels.com/photos/16237456/pexels-photo-16237456/free-photo-of-ville-circulation-trafic-aube.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="City Traffic at Dawn" class="rounded-xl shadow-2xl w-full h-auto object-cover" />
+<body>
+    <div class="container">
+        <div id="interactive" class="viewport">
+            <video autoplay="true" preload="auto" src="" muted="true" playsinline="true"></video>
+            <canvas class="drawingBuffer"></canvas>
         </div>
-        <div class="w-full md:w-1/2">
-            <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-xl shadow-2xl p-8">
-                <h1 class="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Welcome!</h1>
-                <p class="text-lg text-gray-700 leading-relaxed">Our content is coming in a few days. Stay tuned!</p>
+
+        <div id="result" class="result-container hidden">
+            <h2>Informations du produit</h2>
+            <div id="loading" class="hidden">Chargement...</div>
+            <div id="product-info">
+                <h3 id="product-name"></h3>
+                <p id="product-brand"></p>
+                <div class="nutrition-info">
+                    <h4>Valeurs nutritionnelles (pour 100g)</h4>
+                    <ul id="nutrition-list"></ul>
+                </div>
+                <div class="ingredients">
+                    <h4>Ingrédients</h4>
+                    <p id="ingredients-text"></p>
+                </div>
             </div>
+            <button id="scan-again" class="button">Scanner un autre produit</button>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 

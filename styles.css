@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.viewport {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    height: 480px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.viewport > video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.viewport > canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.result-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+h4 {
+    color: #666;
+    margin: 15px 0 10px 0;
+}
+
+#product-brand {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.nutrition-info ul {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.nutrition-info li {
+    margin: 5px 0;
+}
+
+.ingredients {
+    margin-top: 20px;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+#loading {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #666;
+} 
